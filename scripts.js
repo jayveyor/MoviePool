@@ -83,7 +83,7 @@ for (let i = 0; i < 4; i++) {
 
         return $.ajax({
             method: 'GET',
-            url: 'http://www.omdbapi.com/',
+            url: 'https://www.omdbapi.com/',
             dataType: 'jsonp',
             data: {
                 //apikey: '9aa522e',

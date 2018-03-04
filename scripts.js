@@ -76,14 +76,11 @@ $('.reload').on('click', function () {
 });
 
 for (let i = 0; i < 4; i++) {
- const items;
-    items = [
+ const items = [
         'tt4975722', 'tt1895587', 'tt2562232'
     ];
 
-    let item;
-
-    item = items[Math.floor(Math.random() * items.length)]; 
+   let item = items[Math.floor(Math.random() * items.length)]; 
 
      movieCall();
 

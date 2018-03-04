@@ -134,7 +134,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 body {
   background-color: black;
-  background-image: url("apocalypse-city-1.jpg");
+  background-image: url("./background.jpg");
   background-repeat: no-repeat;
   text-align: center;
   height: 100%;
@@ -314,7 +314,9 @@ aside .dan :last-child {
   grid-auto-rows: minmax(70px, auto);
   grid-auto-columns: minmax(70px, auto);
   grid-gap: 20px;
-  grid-template-areas: "movie1 movie2 movie3" "options options options" "title title button";
+  grid-template-areas: "movie1 movie2 movie3"
+ "options options options"
+ "title title button";
   margin: 25px auto 10px; }
 
 .options {
@@ -534,7 +536,11 @@ footer {
   .intro p {
     min-width: 100px; }
   .quizgrid {
-    grid-template-areas: "title title title" "movie1 movie1 movie1" "movie2 movie2 movie2" "movie3 movie3 movie3" "options options button"; }
+    grid-template-areas: "title title title"
+ "movie1 movie1 movie1"
+ "movie2 movie2 movie2"
+ "movie3 movie3 movie3"
+ "options options button"; }
   .logo {
     float: none; }
   .header .flex {

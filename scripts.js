@@ -76,14 +76,18 @@ $('.reload').on('click', function () {
 });
 
 for (let i = 0; i < 4; i++) {
-
-    var items = [
+ const items;
+    items = [
         'tt4975722', 'tt1895587', 'tt2562232'
     ];
 
-    var item = items[Math.floor(Math.random() * items.length)]; 
+    let item;
 
-   
+    item = items[Math.floor(Math.random() * items.length)]; 
+
+     movieCall();
+
+      function movieCall() {
 
         return $.ajax({
             method: 'GET',
@@ -99,7 +103,7 @@ for (let i = 0; i < 4; i++) {
             
                 ifPosterExist(res);
         });
-
+    }
 
     const ifPosterExist = function (data) {
        
@@ -116,10 +120,7 @@ for (let i = 0; i < 4; i++) {
           $(`.year${i}`).append(`<h4 class="year${i}">${data.Year}</h4>`);
 
           //add runtime
-          $(`.runtime${i}`).append(`<h4 class="runtime${i}">${data.Runtime}</h4>`);
-
-
-        
+          $(`.runtime${i}`).append(`<h4 class="runtime${i}">${data.Runtime}</h4>`);        
     }
 
 }

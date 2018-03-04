@@ -62,7 +62,7 @@ $(".movie3answer4slot").droppable({
     accept: ".runtime3",
 });
 
-//function to star pushing characters to be typed
+
 
 
 //button presses for start button and replay button
@@ -76,10 +76,14 @@ $('.reload').on('click', function () {
 });
 
 for (let i = 0; i < 4; i++) {
-    movieCall();
 
-    //function for calling api to get movie info from random 7 digit string
-    function movieCall() {
+    var items = [
+        'tt4975722', 'tt1895587', 'tt2562232'
+    ];
+
+    var item = items[Math.floor(Math.random() * items.length)]; 
+
+   
 
         return $.ajax({
             method: 'GET',
@@ -88,7 +92,7 @@ for (let i = 0; i < 4; i++) {
             data: {
                 //apikey: '9aa522e',
                 apikey: 'e4a75d0b',
-                i: `tt1825683`,
+                i: item,
             }
         }).then(function (res) {
             //check output and print to screen
@@ -96,25 +100,23 @@ for (let i = 0; i < 4; i++) {
                 ifPosterExist(res);
         });
 
-    }
 
     const ifPosterExist = function (data) {
        
-        console.log('hello')
-            //adds poster to container
-            $(`.poster1`).attr('src', `${data.Poster}`);
+          //adds poster to container
+          $(`.poster${i}`).attr('src', `${data.Poster}`);
 
-            //add title
-            $(`.title1`).append(`<h4 class="title1">${data.Title}</h4>`);
+          //add title
+          $(`.title${i}`).append(`<h4 class="title${i}">${data.Title}</h4>`);
 
-            //add director
-            $(`.director1`).append(`<h4 class="director1">${data.Director}</h4>`);
+          //add director
+          $(`.director${i}`).append(`<h4 class="director${i}">${data.Director}</h4>`);
 
-            //add year
-            $(`.year1`).append(`<h4 class="year1">${data.Year}</h4>`);
+          //add year
+          $(`.year${i}`).append(`<h4 class="year${i}">${data.Year}</h4>`);
 
-            //add runtime
-            $(`.runtime1`).append(`<h4 class="runtime1">${data.Runtime}</h4>`);
+          //add runtime
+          $(`.runtime${i}`).append(`<h4 class="runtime${i}">${data.Runtime}</h4>`);
 
 
         

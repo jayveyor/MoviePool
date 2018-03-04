@@ -430,6 +430,9 @@ aside .dan :last-child {
   padding: 5px;
   margin: 10px 10px; }
 
+.imgcont img {
+  filter: blur(10px);}
+
 .movie img {
   height: 200px; }
 

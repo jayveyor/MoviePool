@@ -67,12 +67,8 @@ $(".movie3answer4slot").droppable({
 
 //button presses for start button and replay button
 
-$('.start').on('click', function () {
-    window.location = 'quiz.html';
-});
-
 $('.reload').on('click', function () {
-    window.location.reload();
+    location.reload();
 });
 
 for (let i = 0; i < 4; i++) {

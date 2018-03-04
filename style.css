@@ -331,7 +331,7 @@ aside .dan :last-child {
   line-height: 1; }
 
 .options h4 {
-  margin: 10px; }
+  margin: 5px; }
 
 .quizgrid h1 {
   grid-area: title;
@@ -431,7 +431,7 @@ aside .dan :last-child {
   margin: 10px 10px; }
 
 .imgcont img {
-  filter: blur(10px);}
+  filter: blur(4px);}
 
 .movie img {
   height: 200px; }
